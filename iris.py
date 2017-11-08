@@ -14,7 +14,7 @@ model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy',
-              optimizer='adam', metrics=['accuracy'])
+			  optimizer='adam', metrics=['accuracy'])
 model.fit(x, y, batch_size=15, epochs=150)
 scores = model.evaluate(x, y)
 
@@ -23,6 +23,6 @@ predictions = model.predict(x)
 rounded = [round(x[0]) for x in predictions]
 count = 0
 for i in range(len(predictions)):
-    if(y[i] != predictions[i]):
-        count = count + 1
+	if(y[i] != predictions[i]):
+		count = count + 1
 print('Number of wrong answers : {}'.format(count))

@@ -9,7 +9,7 @@ y = dataset[:, 8]
 
 model = Sequential()
 model.add(Dense(12, input_dim=8, activation='relu')
-          )               # units in first layer
+		  ) 			  # units in first layer
 model.add(Dense(12, activation='sigmoid'))
 model.add(Dense(12, activation='relu'))
 # units in next layer
@@ -19,7 +19,7 @@ model.add(Dense(12, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy',
-              optimizer='adam', metrics=['accuracy'])
+			  optimizer='adam', metrics=['accuracy'])
 
 model.fit(x, y, epochs=10, batch_size=10)
 
